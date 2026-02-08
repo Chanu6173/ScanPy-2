@@ -1,0 +1,293 @@
+/* Import Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Roboto+Mono:wght@400;500&display=swap');
+
+/* Main App Scaffolding */
+.stApp {
+    background: linear-gradient(135deg, 
+        #667eea 0%, 
+        #764ba2 25%, 
+        #f093fb 50%, 
+        #4facfe 75%, 
+        #00f2fe 100%);
+    background-attachment: fixed;
+    background-size: 400% 400%;
+    animation: gradientShift 15s ease infinite;
+    font-family: 'Inter', sans-serif;
+    color: #1f2937;
+    min-height: 100vh;
+}
+
+/* Animated gradient background */
+@keyframes gradientShift {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+/* Typography Enhancements */
+h1 {
+    font-size: 2.5rem !important;
+    font-weight: 800 !important;
+    color: #111827 !important;
+    letter-spacing: -0.025em;
+    margin-bottom: 1rem !important;
+}
+
+h2,
+h3 {
+    font-weight: 700 !important;
+    color: #374151 !important;
+    letter-spacing: -0.015em;
+}
+
+p,
+span,
+label {
+    font-size: 1.05rem !important;
+    line-height: 1.6;
+}
+
+/* Sidebar Customization */
+section[data-testid="stSidebar"] {
+    background-color: #ffffff;
+    border-right: 1px solid #e5e7eb;
+    box-shadow: 4px 0 15px rgba(0, 0, 0, 0.03);
+}
+
+section[data-testid="stSidebar"] h2 {
+    font-size: 1.5rem !important;
+    color: #2563eb !important;
+    /* Sidebar header color */
+}
+
+/* User Profile Section Styling */
+.user-profile-section {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    padding: 20px;
+    border-radius: 12px;
+    margin-bottom: 15px;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+}
+
+.user-profile-section h2 {
+    color: #ffffff !important;
+    font-size: 1.4rem !important;
+    font-weight: 700 !important;
+    margin: 0 !important;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.user-profile-info {
+    background: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 100%);
+    padding: 18px;
+    border-radius: 12px;
+    border: 1px solid #bae6fd;
+    margin-bottom: 15px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.user-profile-info p {
+    color: #1e293b !important;
+    font-size: 0.95rem !important;
+    font-weight: 500 !important;
+    margin: 8px 0 !important;
+    line-height: 1.6;
+}
+
+.user-profile-info p strong {
+    color: #0369a1 !important;
+    font-weight: 700 !important;
+}
+
+/* Sidebar Expander (Settings) Styling */
+section[data-testid="stSidebar"] [data-testid="stExpander"] {
+    color: #1f2937 !important;
+}
+
+section[data-testid="stSidebar"] [data-testid="stExpander"] label {
+    color: #1f2937 !important;
+    font-weight: 500 !important;
+}
+
+/* Checkbox labels in sidebar */
+section[data-testid="stSidebar"] [data-testid="stCheckbox"] label {
+    color: #1f2937 !important;
+    font-size: 0.95rem !important;
+    font-weight: 500 !important;
+}
+
+/* All text in sidebar */
+section[data-testid="stSidebar"] p,
+section[data-testid="stSidebar"] span,
+section[data-testid="stSidebar"] div,
+section[data-testid="stSidebar"] label {
+    color: #1f2937 !important;
+}
+
+/* Sidebar button text */
+section[data-testid="stSidebar"] [data-testid="stButton"] button {
+    color: white !important;
+}
+
+/* Sidebar Status Component */
+.sidebar-status {
+    background-color: #f0f9ff;
+    padding: 15px;
+    border-radius: 10px;
+    border: 1px solid #bae6fd;
+    margin-top: 10px;
+    color: #334155;
+}
+
+.sidebar-status h3 {
+    margin: 0 0 10px 0 !important;
+    font-size: 1.1rem !important;
+    color: #0369a1 !important;
+}
+
+.status-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 8px;
+    font-size: 0.95rem;
+}
+
+.status-icon {
+    margin-right: 8px;
+}
+
+.status-label {
+    font-weight: 600;
+    color: #334155;
+    margin-right: 5px;
+}
+
+.status-value {
+    color: #059669;
+    /* Green for success */
+    font-weight: 700;
+}
+
+/* Card Component */
+.css-card {
+    background-color: #ffffff;
+    padding: 24px;
+    border-radius: 16px;
+    border: 1px solid #e5e7eb;
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.05), 0 4px 6px -2px rgba(0, 0, 0, 0.025);
+    margin-bottom: 24px;
+    transition: all 0.3s ease;
+}
+
+.css-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+    border-color: #d1d5db;
+}
+
+/* Upload Area Styling */
+.stFileUploader {
+    background-color: #ffffff;
+    border-radius: 16px;
+    padding: 30px;
+    border: 2px dashed #9ca3af;
+    transition: border-color 0.2s;
+}
+
+.stFileUploader:hover {
+    border-color: #2563eb;
+}
+
+/* Inputs & Form Fields */
+.stTextInput>div>div>input {
+    font-family: 'Inter', sans-serif;
+    font-size: 1rem;
+    padding: 0.75rem;
+    border-radius: 8px;
+    border: 1px solid #d1d5db;
+    background-color: #f9fafb;
+    color: #111827;
+}
+
+.stTextInput>div>div>input:focus {
+    border-color: #2563eb;
+    box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.2);
+}
+
+.stTextArea>div>div>textarea {
+    font-family: 'Roboto Mono', monospace;
+    /* Monospace for raw OCR text */
+    font-size: 0.95rem;
+    background-color: #1f2937;
+    color: #f3f4f6;
+    border-radius: 8px;
+}
+
+/* Buttons */
+.stButton>button {
+    background-color: #2563eb;
+    color: white;
+    border-radius: 8px;
+    border: none;
+    padding: 0.75rem 1.5rem;
+    font-weight: 600;
+    font-size: 1rem;
+    letter-spacing: 0.025em;
+    transition: background-color 0.2s;
+    width: 100%;
+}
+
+.stButton>button:hover {
+    background-color: #1d4ed8;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+}
+
+/* Status Badges */
+.status-badge {
+    padding: 6px 16px;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+/* Extracted Data Highlighting */
+.stCode {
+    font-size: 1.1rem !important;
+    font-weight: bold;
+}
+
+/* Welcome Message Styling */
+.welcome-message {
+    background: linear-gradient(135deg, #ffffff 0%, #f8fafc 100%);
+    padding: 40px 30px;
+    border-radius: 20px;
+    border: 2px solid #e2e8f0;
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+    text-align: center;
+    margin: 30px 0;
+    backdrop-filter: blur(10px);
+}
+
+.welcome-message h2 {
+    font-size: 2.5rem !important;
+    font-weight: 800 !important;
+    color: #1e293b !important;
+    margin-bottom: 15px !important;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.welcome-message p {
+    font-size: 1.3rem !important;
+    font-weight: 600 !important;
+    color: #475569 !important;
+    margin: 0 !important;
+    letter-spacing: 0.02em;
+}
