@@ -3,6 +3,7 @@
 
 ## link: https://scanpy6173.streamlit.app/
 A production-ready, zero-cost, offline document scanner built with Streamlit, OpenCV, and Tesseract.
+<img width="1913" height="906" alt="image" src="https://github.com/user-attachments/assets/8492ec4c-a375-49f9-8d67-5c20a0e0daf9" />
 
 ## 🚀 Features
 - **Offline Processing**: No cloud APIs, data stays on your machine.
